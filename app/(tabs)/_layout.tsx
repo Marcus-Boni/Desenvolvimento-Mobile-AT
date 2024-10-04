@@ -12,24 +12,91 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
+        headerShown: false
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
+            <TabBarIcon
+              name={focused ? 'home' : 'home-outline'}
+              color={color}
+            />
+          )
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="profile"
         options={{
-          title: 'Explore',
+          title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
+            <TabBarIcon
+              name={focused ? 'person' : 'person-outline'}
+              color={color}
+            />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name="login"
+        options={{
+          title: 'Login',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'log-in' : 'log-in-outline'}
+              color={color}
+            />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name="register"
+        options={{
+          title: 'Register',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'person-add' : 'person-add-outline'}
+              color={color}
+            />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name="stock"
+        options={{
+          title: 'Stock Manager',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'bar-chart' : 'bar-chart-outline'}
+              color={color}
+            />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name="liststock"
+        options={{
+          title: 'List Stock',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'list' : 'list-outline'}
+              color={color}
+            />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name='settings'
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'settings' : 'settings-outline'}
+              color={color}
+            />
+          )
         }}
       />
     </Tabs>
