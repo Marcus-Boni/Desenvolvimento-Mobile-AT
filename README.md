@@ -1,50 +1,67 @@
-# Welcome to your Expo app 👋
+# 🍼 Gerenciador de Fraldas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Gerenciador-de-Fraldas é um aplicativo criado para ajudar as mães a gerenciar o estoque de fraldas e ser alertadas quando os pacotes de fraldas estiverem acabando. Com uma interface simples e intuitiva, a mãe pode adicionar, editar e remover pacotes de fraldas, além de definir uma foto de perfil, visualizar o estoque atual e verificar quando é hora de reabastecer.
 
-## Get started
+## 💼 Conta de administrador padrão para acesso ao sistema.
+- **Login:** **admin@teste.com**
+- **Senha:** **123456**
 
-1. Install dependencies
+## 📱 Funcionalidades Principais
+- **Gerenciamento de Estoque de Fraldas**: Adicionar, editar e excluir pacotes de fraldas no estoque.
+- **Alertas de Estoque**: Acompanhamento visual para alertar quando as fraldas estão acabando.
+- **Foto de Perfil**: Definição de foto de perfil do usuário utilizando a biblioteca `expo-camera`.
+- **Login e Registro**: Autenticação via Firebase com telas estilizadas para login, registro e recuperação de senha.
+- **Persistência de Dados**: Armazenamento de dados no Firebase Realtime Database e persistência local.
+- **Verificação de Conexão**: Monitoramento da conexão à internet utilizando `expo-network`.
 
+## 🛠️ Tecnologias Utilizadas
+- **Expo**: Framework principal para o desenvolvimento mobile.
+- **React Native Paper**: Utilizado para criar uma interface moderna e estilizada.
+- **Firebase**: Utilizado para autenticação, banco de dados em tempo real e armazenamento de fotos na nuvem.
+- **Expo Camera**: Usado para permitir a escolha de fotos de perfil.
+- **@react-native-async-storage/async-storage**: Para persistência de sessão local.
+- **Expo Network**: Para verificar a conectividade com a internet.
+
+## 🚀 Publicação e Acesso
+O aplicativo foi publicado no Expo.dev e também está disponível no Snack para testes.
+
+- **Link no Snack**: [BabyCare no Snack Expo](https://snack.expo.dev/@marcusblz/desenvolvimento-mobile-at)
+
+## 🔧 Instalação e Execução
+### Pré-requisitos:
+- Node.js instalado
+- Expo CLI instalada
+
+### Passos:
+1. Clone este repositório:
    ```bash
+   git clone https://github.com/Marcus-Boni/Desenvolvimento-Mobile-AT.git
+   ```
+2. Instale as dependências:
+   ```bash
+   cd Gerenciador-de-Fraldas
    npm install
    ```
-
-2. Start the app
-
+3. Execute o projeto:
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## ⚙️ Regras do Firebase Database:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```json
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🤝 Contribuição
+- Sinta-se à vontade para contribuir com o projeto através de pull requests ou abrindo issues.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Desenvolvido com ❤️ por [Marcus](https://github.com/Marcus-Boni)
